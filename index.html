@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSpace - Explore Ideas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">BlogSpace.</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#categories">Categories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Discover Stories & Ideas</h1>
+        <p>Explore articles, learn new things and get inspired.</p>
+        <a href="#blogs" class="btn">Explore Blogs</a>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+        <h2>Explore Categories</h2>
+
+        <div class="category-list">
+            <button onclick="filterBlogs('All')">All</button>
+            <button onclick="filterBlogs('Technology')">Technology</button>
+            <button onclick="filterBlogs('Programming')">Programming</button>
+            <button onclick="filterBlogs('AI/ML')">AI/ML</button>
+            <button onclick="filterBlogs('Lifestyle')">Lifestyle</button>
+        </div>
+    </section>
+
+    <!-- Blog Cards -->
+    <section class="blogs" id="blogs">
+        <h2>Latest Articles</h2>
+
+        <div class="blog-container" id="blogContainer">
+
+            <div class="blog-card" data-category="Technology">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600" alt="Technology">
+                <div class="blog-content">
+                    <span>Technology</span>
+                    <h3>The Future of Technology</h3>
+                    <p>Discover how modern technology is changing our world.</p>
+                    <button onclick="openArticle(0)">Read More →</button>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="Programming">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600" alt="Programming">
+                <div class="blog-content">
+                    <span>Programming</span>
+                    <h3>Why Learn Programming?</h3>
+                    <p>Learn how programming can help build your career.</p>
+                    <button onclick="openArticle(1)">Read More →</button>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="AI/ML">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600" alt="AI">
+                <div class="blog-content">
+                    <span>AI/ML</span>
+                    <h3>Introduction to Artificial Intelligence</h3>
+                    <p>Explore the exciting world of AI and machine learning.</p>
+                    <button onclick="openArticle(2)">Read More →</button>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="Lifestyle">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600" alt="Lifestyle">
+                <div class="blog-content">
+                    <span>Lifestyle</span>
+                    <h3>Building Better Daily Habits</h3>
+                    <p>Simple habits that can improve your everyday life.</p>
+                    <button onclick="openArticle(3)">Read More →</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Article Page -->
+    <section class="article-page" id="articlePage">
+        <button onclick="closeArticle()" class="back-btn">← Back to Blogs</button>
+
+        <div id="articleContent"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>BlogSpace.</h2>
+        <p>Sharing knowledge, one article at a time.</p>
+        <p>© 2026 BlogSpace. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
